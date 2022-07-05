@@ -31,18 +31,12 @@ function getUserAdditionalInfo(userInfo) {
     });
 }
 
+
 getUserInfo()
-    .then(data => {
-        return data;
-    })
-    .then((data) => {
-        getUserAvatar(data);
-        return data;
-    })
-    .then((data) => {
-        getUserAdditionalInfo(data);
-        console.log(data);
-    });
+    .then(data => data)
+    .then(data => getUserAvatar(data))
+    .then(data => getUserAdditionalInfo(data))
+    .then(data => console.log(data));
 
 
 console.log('задание № 6');
